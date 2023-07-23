@@ -3,7 +3,7 @@ import {
   deleteUser,
   getAllUsers,
   getBookingsOfUser,
-  // getUserById,
+  getUserById,
   login,
   signup,
   updateUser,
