@@ -4,7 +4,7 @@ import College from "../models/College";
 import User from "../models/User";
 
 export const newBooking = async (req, res, next) => {
-  const { college, date, idNumber, user } = req.body;
+  const { college, date, subjectId, user } = req.body;
 
   let existingCollege;
   let existingUser;
@@ -26,7 +26,7 @@ export const newBooking = async (req, res, next) => {
     booking = new Bookings({
       college,
       date: new Date(`${date}`),
-      idNumber,
+      subjectId,
       user,
     });
     const session = await mongoose.startSession();

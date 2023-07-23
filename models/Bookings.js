@@ -11,9 +11,10 @@ const bookingSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  idNumber: {
+  subjectId: {
     type: Number,
     required: true,
+    trim: true,
   },
   user: {
     type: mongoose.Types.ObjectId,

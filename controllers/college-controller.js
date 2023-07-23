@@ -57,12 +57,7 @@ export const addCollege = async (req, res, next) => {
   } catch (err) {
     return console.log(err);
   }
-
-  // college = await college.save();
-  // }catch (err){
-  //   return console.log(err);
-  // }
-
+  
   if (!college) {
     return res.status(500).json({ message: "Request Failed" });
   }

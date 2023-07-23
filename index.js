@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routes/user-routes";
@@ -8,13 +9,13 @@ import bookingsRouter from "./routes/booking-routes";
 dotenv.config();
 
 const app = express();
-
+// const cors = require('cors');
 //middlewares
+app.use(cors());
 app.use(express.json());
 app.use("/user", userRouter);
 app.use("/admin", adminRouter);
 app.use("/college", collegeRouter);
-
 app.use("/booking", bookingsRouter);
 
 
