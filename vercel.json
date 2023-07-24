@@ -17,6 +17,6 @@
     }
   ],
   "env": {
-    "MONGO_URI": "@env.MONGO_URI"
+    "MONGO_URI": "@env.REACT_APP_MONGO_URI"
   }
 }
